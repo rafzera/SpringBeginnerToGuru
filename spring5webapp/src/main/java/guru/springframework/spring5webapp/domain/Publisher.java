@@ -11,7 +11,6 @@ import java.util.Set;
 @Setter
 @EqualsAndHashCode(exclude = "books")
 @NoArgsConstructor
-@ToString
 public class Publisher {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -34,4 +33,15 @@ public class Publisher {
         this.zipCode = zipCode;
     }
 
+    @Override
+    public String toString() {
+        return "Publisher{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", addressLine='" + addressLine + '\'' +
+                ", state='" + state + '\'' +
+                ", city='" + city + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                '}';
+    }
 }
